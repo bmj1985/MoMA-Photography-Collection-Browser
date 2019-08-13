@@ -4,7 +4,7 @@
     <div class="modal">
       <header class="modal-header">
         <slot name="header" class="modal-title">
-          {{artwork.Title}}
+          {{artwork.Title | truncate}}
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"
             @click="close"
           >
@@ -44,6 +44,17 @@ export default {
     close() {
       this.$emit('close');
     }
+  },
+  filters: {
+    truncate: function(value) {
+      if (value.length > 100) {
+        value = value.substring(0, 99) + '...';
+      }
+
+
+      return value
+
+    }
   }
 };
 </script>
@@ -70,7 +81,7 @@ export default {
   flex-direction: column;
   height: 75vh;
   width: 75vw;
-  margin: auto auto auto 20vw;
+  margin: 10%;
 }
 
 .modal-header,

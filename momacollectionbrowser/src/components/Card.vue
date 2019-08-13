@@ -1,6 +1,6 @@
 <template>
   <div id="card">
-     <img :src="artwork.ThumbnailURL" alt="Card image">
+     <img :src="artwork.ThumbnailURL" alt="Card image" @click="showModal">
     <button
       type="button"
       class="btn btn-secondary"
