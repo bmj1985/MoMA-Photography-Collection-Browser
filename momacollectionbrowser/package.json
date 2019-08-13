@@ -13,6 +13,8 @@
   "dependencies": {
     "ajv": "^6.1.1",
     "dayjs": "^1.7.5",
+    "js-yaml": "^3.13.1",
+    "mem": "^5.1.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
